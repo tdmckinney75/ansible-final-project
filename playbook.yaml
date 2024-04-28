@@ -1,0 +1,30 @@
+---
+- name: Update the server
+- hosts: all
+- become: yes
+- roles:
+  - server
+
+- name: Install PHP
+- hosts: all
+- become: yes
+- roles:
+  - php
+
+- name: Install Nginx / Apache
+- hosts: all
+- become: yes
+- roles:
+  - Nginx
+
+- name: Install mySQL
+- hosts: all
+- become: yes
+- roles:
+  - geerlingguy.mysql
+
+- name: Install Wordpress
+- hosts: all
+- become: yes
+- roles: 
+  - wordpress
